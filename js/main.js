@@ -86,7 +86,7 @@ const words = [
 
 // 変数定義
 // 残り時間
-let time = 10;
+let time = 30;
 // 正答数
 let score = 0;
 
@@ -179,7 +179,7 @@ function reset() {
   // スコアの表示更新
   score_area.textContent = score;
   // 残り時間初期化
-  time = 10;
+  time = 30;
   // 残り時間の表示更新
   time_area.textContent = time;
   // リスタートボタン非表示

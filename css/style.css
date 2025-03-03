@@ -1,17 +1,19 @@
 @charset "utf-8";
 
+/* 全体設定 */
 body {
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(red, yellow);
+  background: linear-gradient(135deg, rgb(251, 213, 251), rgb(149, 233, 243));
   font-family: "Kosugi Maru", sans-serif;
 }
 
+/* メイン（白背景部分） */
 main {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   box-shadow: rgba(100, 100, 100, 0.5) 0px 0px 10px;
   width: 80%;
   border-radius: 40px;
@@ -21,6 +23,7 @@ main {
   position: relative;
 }
 
+/* カウントダウン時表示されるdivの設定 */
 .count_cover {
   position: absolute;
   display: flex;
@@ -37,39 +40,44 @@ main {
   background: rgba(255, 255, 255, 0.9);
 }
 
+/* 見出し */
 h1 {
   font-family: "Jersey 15", sans-serif;
   font-size: 60px;
   letter-spacing: 0.1em;
   text-align: center;
-  background: linear-gradient(90deg, #58c6ff 0%, #076ad9 40%, #ff3bef 80%);
+  background: linear-gradient(135deg, #58c6ff 0%, #076ad9 40%, #ff3bef 80%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 15px;
 }
 
+/* 残り時間、スコア表示用枠 */
 .time,
 .score {
   text-align: center;
-  background: linear-gradient(90deg, #58c6ff 0%, #076ad9 40%, #ff3bef 80%);
+  background: linear-gradient(135deg, #58c6ff 0%, #076ad9 40%, #ff3bef 80%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* 残り時間文字と余白 */
 .time {
   font-size: 20px;
   margin-bottom: 15px;
 }
 
+/* スコア文字と余白 */
 .score {
   font-size: 30px;
   margin-bottom: 20px;
 }
 
+/* 問題出題エリア */
 #game_area {
-  background: linear-gradient(90deg, #58c6ff 0%, #076ad9 40%, #ff3bef 80%);
+  background: linear-gradient(135deg, #58c6ff 0%, #076ad9 40%, #ff3bef 80%);
   height: 90px;
   border-radius: 10px;
   display: flex;
@@ -80,12 +88,14 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* 入力済み文字色 */
 #game_area .finish {
-  color: red;
+  color: rgb(255, 151, 81);
 }
 
+/* リスタートボタン */
 #restart {
-  background: linear-gradient(90deg, #58c6ff 0%, #076ad9 40%, #ff3bef 80%);
+  background: linear-gradient(135deg, #58c6ff 0%, #076ad9 40%, #ff3bef 80%);
   border-radius: 10px;
   height: 50px;
   width: 150px;
@@ -97,6 +107,7 @@ h1 {
   font-size: 20px;
 }
 
+/* リスタートボタンのアイコン画像 */
 #restart::before {
   content: "";
   display: block;
