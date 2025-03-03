@@ -18,6 +18,23 @@ main {
   max-width: 800px;
   height: 400px;
   padding: 30px;
+  position: relative;
+}
+
+.count_cover {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jersey 15", sans-serif;
+  font-size: 200px;
+  color: #076ad9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.9);
 }
 
 h1 {
@@ -60,8 +77,31 @@ h1 {
   align-items: center;
   color: #fff;
   font-size: 30px;
+  margin-bottom: 20px;
 }
 
 #game_area .finish {
   color: red;
+}
+
+#restart {
+  background: linear-gradient(90deg, #58c6ff 0%, #076ad9 40%, #ff3bef 80%);
+  border-radius: 10px;
+  height: 50px;
+  width: 150px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+#restart::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  margin-right: 3px;
+  background: url(../img/restart.png) no-repeat center center/contain;
 }
