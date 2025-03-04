@@ -131,16 +131,19 @@ function input(event) {
     now_word[0].classList.add('finish');
     // 配列の先頭を削除
     now_word.shift();
+  }
+  next();
+}
 
-
-    // 出題単語の文字が残っていなければ
-    if (now_word.length === 0) {
-      // 次の問題へ
-      question()
-      // スコア更新
-      score++;
-      score_area.textContent = score;
-    }
+// 次の問題に進む
+function next() {
+  // 出題単語の文字が残っていなければ
+  if (now_word.length === 0) {
+    // スコア更新
+    score++;
+    score_area.textContent = score;
+    // 次の問題へ
+    question();
   }
 }
 
@@ -207,7 +210,7 @@ function game_start() {
   let count_down = setInterval(() => {
     if (count > 1) {
       // 数字減少
-      count--
+      count--;
       // カウント表示
       count_cover.textContent = count;
     } else {
